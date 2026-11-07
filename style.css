@@ -1,0 +1,241 @@
+/* Ganti warna di sini, semua bagian halaman ikut berubah */
+:root {
+    --utama: #be123c;
+    --utama-gelap: #4c0519;
+    --aksen: #14b8a6;
+    --aksen-2: #fbbf24;
+    --teks: #1a0b12;
+    --redup: #7a5c68;
+    --latar: #fff5f7;
+    --kartu: #ffffff;
+    --garis: #fbd5d6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--teks);
+    background: var(--latar);
+    line-height: 1.65;
+}
+
+.wadah {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Header */
+.atas {
+    background: #fff;
+    border-bottom: 1px solid var(--garis);
+}
+
+.atas .wadah {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    width: 100%;
+    padding: 0 24px;
+}
+
+.merek {
+    color: var(--utama);
+    font-weight: 70;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.merek-logo {
+    height: 40px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.atas nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.atas nav a {
+    color: var(--teks);
+    text-decoration: none;
+}
+
+.atas nav a.tombol {
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    background: var(--utama);
+    color: #fff;
+    padding: 64px 0;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0 0 12px;
+}
+
+.hero p {
+    margin: 0 auto 24px;
+    max-width: 560px;
+    opacity: .9;
+}
+
+.hero .tombol {
+    background: #fff;
+    color: var(--utama);
+}
+
+/* Konten */
+main>section.wadah {
+    margin-bottom: 48px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.kartu {
+    background: var(--kartu);
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.kartu h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.kartu p {
+    margin: 0;
+    color: var(--redup);
+}
+
+details {
+    background: var(--kartu);
+    border: 1px solid var(--garis);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0 auto 8px;
+    max-width: 640px;
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+details p {
+    color: var(--redup);
+    margin: 8px 0 0;
+}
+
+.form {
+    display: grid;
+    gap: 14px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.form label {
+    display: grid;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.form input {
+    padding: 8px 12px;
+    border: 1px solid var(--garis);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.pesan {
+    margin: 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.pesan.berhasil {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pesan.gagal {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.tombol,
+button {
+    display: inline-block;
+    background: var(--utama);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tombol:hover,
+button:hover {
+    opacity: .9;
+}
+
+.tombol.kecil {
+    padding: 6px 12px;
+}
+
+/* Footer */
+.bawah {
+    border-top: 1px solid var(--garis);
+    padding: 16px 0;
+    color: var(--redup);
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+}
